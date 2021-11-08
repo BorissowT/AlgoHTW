@@ -12,10 +12,8 @@ public class Console implements IConsole {
 	@Override
 	public String readString(String text) {
 		System.out.print(text);
-		while (scanner.hasNextLine()) {
-			String result = scanner.nextLine().replaceAll("[^a-zA-Z0-9-\\\\u0020]"," ");
-		}
-		return null;
+		String input = scanner.nextLine();
+		return input.replaceAll("[^a-zA-Z0-9]"," ");
 	}
 
 	@Override
