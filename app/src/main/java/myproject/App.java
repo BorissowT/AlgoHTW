@@ -15,16 +15,12 @@ import myproject.console.IConsole;
 import java.util.LinkedList;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
         IConsole console = new Console();
         CommandFactory factory = new CommandFactory(console);
         LinkedList<ICommand> cmds = factory.returnsCommands();
         cli(cmds, console);
-        //TODO fix string input
     }
 
     private static void cli(LinkedList<ICommand> cmds, IConsole console) {

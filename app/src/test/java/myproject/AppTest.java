@@ -3,20 +3,33 @@
  */
 package myproject;
 
+import myproject.commands.Algorithms.*;
 import myproject.console.impl.Console;
 import myproject.console.IConsole;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+    @Test public void GCDEuclidSubtractionIt_test() {
+        Assert.assertEquals(GCDEuclidSubtractionIt.get_gcd(24,12), 12);
     }
 
-    @Test public void input_int_test(){
-        IConsole console = new Console();
-        int number = console.readInteger("Enter number for x: ");
+    @Test public void GCDEuclidSubtractionRec_test() {
+        Assert.assertEquals(GCDEuclidSubtractionRec.get_gcd(24,12), 12);
+    }
+
+    @Test public void GCDEuclidDivisionRestIt_test() {
+        Assert.assertEquals(GCDEuclidDivisionRestIt.get_gcd(24,12), 12);
+    }
+
+    @Test public void GCDEuclidDivisionRestRec_test() {
+        Assert.assertEquals(GCDEuclidDivisionRestRec.get_gcd(24,12), 12);
+    }
+    @Test public void SieveEratosthenes_test() {
+        int[] list = {2,3,5,7,11};
+        //for(int element:SieveEratosthenes.get_prime(12)){System.out.println(element);};
+        Assert.assertArrayEquals(SieveEratosthenes.get_prime(12), list);
     }
 }
