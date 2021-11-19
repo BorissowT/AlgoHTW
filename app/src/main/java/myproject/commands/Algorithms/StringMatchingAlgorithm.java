@@ -1,6 +1,8 @@
 package myproject.commands.Algorithms;
 
 public class StringMatchingAlgorithm {
+
+	//GIBT den Index des gesuchten Wort
 	public static int match(String str_text, String str_search){
 		int patternSize = str_search.length();
 		int textSize = str_text.length();
