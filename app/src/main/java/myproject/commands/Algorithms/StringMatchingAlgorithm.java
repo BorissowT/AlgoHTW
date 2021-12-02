@@ -3,7 +3,7 @@ package myproject.commands.Algorithms;
 public class StringMatchingAlgorithm {
 
 	//GIBT den Index des gesuchten Wort
-	public static int match(String str_text, String str_search){
+	public static String match(String str_text, String str_search){
 		int patternSize = str_search.length();
 		int textSize = str_text.length();
 		char[] text = str_text.toCharArray();
@@ -16,10 +16,10 @@ public class StringMatchingAlgorithm {
 			while (text[i + j] == pattern[j]) {
 				j += 1;
 				if (j >= patternSize)
-					return i;
+					return "The word found. Index: " + i;
 			}
 			i += 1;
 		}
-		return -1;
+		return "Not found";
 	}
 }

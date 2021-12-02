@@ -18,7 +18,7 @@ public class StringMatchingAlgorithmCmd implements ICommand {
 		String text = console.readString("Please, enter text for search:");
 		String search = console.readString("Please, enter a word for search:");
 
-		int match = StringMatchingAlgorithm.match(text, search);
+		String match = StringMatchingAlgorithm.match(text, search);
 		console.write("StringMatch() = "+ match);
 	}
 
